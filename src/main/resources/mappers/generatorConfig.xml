@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE generatorConfiguration
-        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+<!DOCTYPE generatorConfiguration  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
@@ -19,12 +18,11 @@
         </commentGenerator>
 
         <!--jdbc的数据库连接 -->
-        <jdbcConnection>
+        <jdbcConnection
                 driverClass="${db.driverClassName}"
                 connectionURL="${db.url}"
                 userId="${db.username}"
-                password="${db.password}">
-        </jdbcConnection>
+                password="${db.password}"/>
 
 
         <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->

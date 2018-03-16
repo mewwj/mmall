@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.mall.common.Const;
 import com.mall.common.ResponseCode;
 import com.mall.common.ServerResponse;
-import com.mall.dao.CartMapper;
 import com.mall.pojo.User;
 import com.mall.service.ICartService;
 import com.mall.vo.CartVo;
@@ -32,8 +31,7 @@ public ServerResponse<CartVo> list(HttpSession session){
 		}
 		return iCartService.list(user.getId());
 	}
-	
-	
+//传入购物的物品ID和需要购买的数量
 @RequestMapping("add.do")
 @ResponseBody
 public ServerResponse<CartVo> add(HttpSession session,Integer count,Integer productId){
@@ -43,7 +41,7 @@ public ServerResponse<CartVo> add(HttpSession session,Integer count,Integer prod
 	}
 	return iCartService.add(user.getId(), productId, count);
 }
-
+//更新购物的数量和购买的物品的id
 @RequestMapping("update.do")
 @ResponseBody
 public ServerResponse<CartVo> update(HttpSession session,Integer count,Integer productId){
